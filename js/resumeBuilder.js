@@ -165,8 +165,10 @@ var education = {
     ]
 };
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").prepend(formattedRole);
 
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
 
 if (bio.skills.length > 0) {
@@ -177,9 +179,32 @@ if (bio.skills.length > 0) {
 	};
 }
 
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+$("#topContacts").append(formattedMobile);
+
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+$("#topContacts").append(formattedEmail);
+
+var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#topContacts").append(formattedGitHub);
+
+var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+$("#topContacts").append(formattedTwitter);
+
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#topContacts").append(formattedLocation);
+
+var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
+$("#topContacts").append(formattedbioPic);
+
+var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#topContacts").append(formattedWelcomeMsg);
+
 for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
+	
 	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 	var formattedJobTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	
 	$(".work-entry:last").append(formattedEmployer + formattedJobTitle);
 }
