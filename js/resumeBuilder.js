@@ -65,6 +65,38 @@ var work = {
     ]
 };
 
+var projects = {
+	"projects": [
+	{
+		"title": "udacity-intro-hadoop-mapreduce",
+		"dates": "2014",
+		"description": "Final project for Udacity Introduction to Hadoop and MapReduce course.",
+		"images": ["images/average-length.png",
+		           "images/popular-tags.png",
+		           "images/response-time.png",
+		           "images/student-times.png"]
+	},
+	{
+		"title": "kaggle-the-analytics-edge",
+		"dates": "2014",
+		"description": "Code for private Kaggle competition held as part of MITx : 15.071x The Analytics Edge course.  Illustrates my knowledge of data analytics techniques including random forests and logistic regression.  Written in R.",
+		"images": ["images/15.071x_CourseImage.png"]
+	},
+	{
+		"title": "quadrillionth-decimal-place",
+		"dates": "2013",
+		"description": "Implementation (in C) of a Method of Bailey, Borwein, and Plouffe.",
+		"images": ["images/1024px-Matheon2.jpg"]
+	},
+	{
+		"title": "twisted-life",
+		"dates": "2013",
+		"description": "Video game (written in CoffeeScript) based on J.H. Conway's Game of Life.",
+		"images": ["images/twisted-life.tiff"]
+	}
+	]
+}
+
 var education = {
     "schools": [
         {
