@@ -61,7 +61,7 @@ var projects = {
 		"images": ["images/twisted-life.tiff"]
 	}
 	]
-}
+};
 
 var bio = {
 	"name": "Paul Reiners",
@@ -75,7 +75,7 @@ var bio = {
 		"location": "Chaska, Minnesota"
 	},
 	"skills": [
-		"programming", "math", "C", "C++", "Lisp (Common Lisp, Scheme, and Clojure)", "Haskell", "Scala", "Perl", "Java"
+		"Programming", "Math", "C", "C++", "Lisp (Common Lisp, Scheme, and Clojure)", "Haskell", "Scala", "Perl", "Java"
 		],
 	"biopic": "images/lambda.png"
 };
@@ -164,3 +164,16 @@ var education = {
         }
     ]
 };
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+
+$("#header").prepend(formattedName);
+
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	var formattedSkills = [];
+	bio.skills.forEach(function (skill) {
+	    var formattedSkill = HTMLskills.replace("%data%", skill);
+		$("#skills").append(formattedSkill);
+	});
+}
