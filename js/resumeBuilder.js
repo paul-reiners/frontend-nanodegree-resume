@@ -1,17 +1,3 @@
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedContactInfo = HTMLcontactGeneric.replace("%data%", bio.contactInfo);
-var formattedPictureURL = HTMLbioPic.replace("%data%", bio.biopic);
-var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-var formattedSkills = HTMLskills.replace("%data%", bio.skills);
-
-$("#header").prepend(formattedSkills);
-$("#header").prepend(formattedWelcomeMessage);
-$("#header").prepend(formattedPictureURL);
-$("#footerContacts").prepend(formattedContactInfo);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
 var work = {
     "jobs": [
         {
@@ -178,6 +164,3 @@ var education = {
         }
     ]
 };
-
-$("#main").append(work["position"]);
-$("#main").append(education.name);
