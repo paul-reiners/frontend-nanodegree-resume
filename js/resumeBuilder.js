@@ -172,8 +172,14 @@ $("#header").prepend(formattedName);
 if (bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
 	for (skill in bio.skills) {
-		console.log(skill);
 	    var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#skills").append(formattedSkill);
 	};
+}
+
+for (job in work.jobs) {
+	$("#workExperience").append(HTMLworkStart);
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedJobTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	$(".work-entry:last").append(formattedEmployer + formattedJobTitle);
 }
