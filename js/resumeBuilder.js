@@ -1,23 +1,3 @@
-var name = "Paul Reiners";
-var role = "Software Developer";
-
-var bio = {
-	"name": name,
-	"role": role,
-	"contacts" : {
-		"mobile": "952-846-7749",
-		"email": "paul.reiners@gmail.com",
-		"github": "paul-reiners",
-		"twitter": "@paulreiners",
-		"location": "Chaska, Minnesota"
-	},
-	"welcomeMessage": "Welcome to my résumé page.",
-	"skills": [
-		"programming", "math"
-		],
-	"biopic": "images/lambda.png"
-};
-
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedContactInfo = HTMLcontactGeneric.replace("%data%", bio.contactInfo);
@@ -96,6 +76,23 @@ var projects = {
 	}
 	]
 }
+
+var bio = {
+	"name": "Paul Reiners",
+	"role": "Software Developer",
+	"welcomeMessage": "I have many years of software development experience programming in C, C++, Java, Lisp, Python, R, and miscellaneous other languages. I have an M.S. in computer science and an M.S. in math. I am particularly knowledgeable in algorithms, data science, functional programming, and computational math.",
+	"contacts" : {
+		"mobile": "952-846-7749",
+		"email": "paul.reiners@gmail.com",
+		"github": "paul-reiners",
+		"twitter": "@paulreiners",
+		"location": "Chaska, Minnesota"
+	},
+	"skills": [
+		"programming", "math", "C", "C++", "Lisp (Common Lisp, Scheme, and Clojure)", "Haskell", "Scala", "Perl", "Java"
+		],
+	"biopic": "images/lambda.png"
+};
 
 var education = {
     "schools": [
