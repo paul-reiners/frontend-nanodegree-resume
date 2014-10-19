@@ -98,9 +98,9 @@ var education = {
     "schools": [
         {
             "name": "Iowa State University",
-            "city": "Ames, IA, US",
+            "location": "Ames, IA, US",
             "degree": "M.S.",
-            "major": [
+            "majors": [
                 "Comp Sci"
             ],
             "dates": 1996,
@@ -108,9 +108,9 @@ var education = {
         },
         {
             "name": "University of Illinois",
-            "city": "Urbana-Champaign, IL, US",
+            "location": "Urbana-Champaign, IL, US",
             "degree": "M.S.",
-            "major": [
+            "majors": [
                 "Applied Math (Theory of Computation"
             ],
             "dates": 1991,
@@ -118,9 +118,9 @@ var education = {
         },
         {
             "name": "University of Northern Iowa",
-            "city": "Cedar Falls, IA, US",
+            "location": "Cedar Falls, IA, US",
             "degree": "B.A.",
-            "major": [
+            "majors": [
                 "Math"
             ],
             "dates": 1984,
@@ -128,12 +128,6 @@ var education = {
         }
     ],
     "onlineCourses": [
-        {
-            "title": "SABR101x: Sabermetrics 101: Introduction to Baseball Analytics",
-            "school": "edX BUx",
-            "dates": 2014,
-            "url": "https://verify.edx.org/cert/183eb375232e4149bbc1ecb225bc7bee"
-        },
         {
             "title": "15.071x: The Analytics Edge",
             "school": "edX: MITx",
@@ -169,6 +163,12 @@ var education = {
             "school": "Coursera: Johns Hopkins University",
             "dates": 2014,
             "url": "https://www.coursera.org/records/hEmyst95cKdWbHY6"
+        },
+        {
+            "title": "SABR101x: Sabermetrics 101: Introduction to Baseball Analytics",
+            "school": "edX BUx",
+            "dates": 2014,
+            "url": "https://verify.edx.org/cert/183eb375232e4149bbc1ecb225bc7bee"
         },
         {
             "title": "Intro to Hadoop and MapReduce",
