@@ -77,7 +77,7 @@ var bio = {
 	"skills": [
 		"Programming", "Math", "C", "C++", "Lisp (Common Lisp, Scheme, and Clojure)", "Haskell", "Scala", "Perl", "Java"
 		],
-	"biopic": "images/lambda.png"
+	"biopic": "images/lambda-small.png"
 };
 
 var education = {
@@ -203,8 +203,21 @@ $("#topContacts").append(formattedWelcomeMsg);
 for (job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 	
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedJobTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	var formattedEmployer = 
+        HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedJobTitle = 
+        HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedLocation = 
+        HTMLworkTitle.replace("%data%", work.jobs[job].location);
+    var formattedDates = HTMLworkTitle.replace("%data%", work.jobs[job].dates);
+    var formattedDescription = 
+        HTMLworkTitle.replace("%data%", work.jobs[job].description);
+
+    var formattedEmployerJobTitle = 
+        formattedEmployer + formattedJobTitle;
 	
-	$(".work-entry:last").append(formattedEmployer + formattedJobTitle);
+	$(".work-entry:last").append(formattedEmployerJobTitle);
+    $(".work-entry:last").append(formattedLocation);
+    $(".work-entry:last").append(formattedDates);
+    $(".work-entry:last").append(formattedDescription);
 }
