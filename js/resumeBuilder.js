@@ -60,7 +60,16 @@ var projects = {
 		"description": "Video game (written in CoffeeScript) based on J.H. Conway's Game of Life.",
 		"images": ["images/twisted-life.tiff"]
 	}
-	]
+	],
+
+    "display": function() {
+        for (var project in projects) {
+            $("#projects").append(HTMLprojectStart);
+            var formattedTitle = 
+                HTMLprojectTitle.replace("%data%", projects[project].title);
+            $("#projects").append(formattedTitle);
+       }
+    }
 };
 
 var bio = {
@@ -200,24 +209,47 @@ $("#topContacts").append(formattedbioPic);
 var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#topContacts").append(formattedWelcomeMsg);
 
-for (job in work.jobs) {
-	$("#workExperience").append(HTMLworkStart);
-	
-	var formattedEmployer = 
-        HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-	var formattedJobTitle = 
-        HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    var formattedLocation = 
-        HTMLworkTitle.replace("%data%", work.jobs[job].location);
-    var formattedDates = HTMLworkTitle.replace("%data%", work.jobs[job].dates);
-    var formattedDescription = 
-        HTMLworkTitle.replace("%data%", work.jobs[job].description);
+function displayWork() {
+    for (var job in work.jobs) {
+    	$("#workExperience").append(HTMLworkStart);
+    	
+    	var formattedEmployer = 
+            HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    	var formattedJobTitle = 
+            HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedLocation = 
+            HTMLworkTitle.replace("%data%", work.jobs[job].location);
+        var formattedDates = HTMLworkTitle.replace("%data%", work.jobs[job].dates);
+        var formattedDescription = 
+            HTMLworkTitle.replace("%data%", work.jobs[job].description);
 
-    var formattedEmployerJobTitle = 
-        formattedEmployer + formattedJobTitle;
-	
-	$(".work-entry:last").append(formattedEmployerJobTitle);
-    $(".work-entry:last").append(formattedLocation);
-    $(".work-entry:last").append(formattedDates);
-    $(".work-entry:last").append(formattedDescription);
+        var formattedEmployerJobTitle = 
+            formattedEmployer + formattedJobTitle;
+    	
+    	$(".work-entry:last").append(formattedEmployerJobTitle);
+        $(".work-entry:last").append(formattedLocation);
+        $(".work-entry:last").append(formattedDates);
+        $(".work-entry:last").append(formattedDescription);
+    }
+};
+
+displayWork();
+projects.display();
+
+$(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+    logClicks(x, y);
+});
+
+function inName(theName) {
+    var parts = theName.split(" ");
+    var firstName = parts[0];
+    var lastName = parts[1];
+
+    firstName = 
+        firstName.slice(0, 1).toUpperCase() + firstName.slice(1).toLowerCase();
+    lastName = lastName.toUpperCase();
+
+    return firstName + " " + lastName;
 }
