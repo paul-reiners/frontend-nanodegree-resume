@@ -36,10 +36,8 @@ var projects = {
 	{
 		"title": "udacity-intro-hadoop-mapreduce",
 		"dates": "2014",
-		"description": "Final project for Udacity Introduction to Hadoop and MapReduce course.",
-		"images": ["images/average-length.png",
-		           "images/popular-tags.png",
-		           "images/response-time.png",
+		"description": "Final project for Udacity Introduction to Hadoop and MapReduce course.  This project analyzes a large set of discussion forum data.  Analysis includes students and posting time on forums, among other things.",
+		"images": ["images/popular-tags.png",
 		           "images/student-times.png"]
 	},
 	{
@@ -51,14 +49,14 @@ var projects = {
 	{
 		"title": "quadrillionth-decimal-place",
 		"dates": "2013",
-		"description": "Implementation (in C) of a Method of Bailey, Borwein, and Plouffe.",
-		"images": ["images/1024px-Matheon2.jpg"]
+		"description": "This project is an implementation in C of the Bailey–Borwein–Plouffe (BBP) formula. The BBP formula allows you to compute efficiently an arbitrary digit of irrational constants that can be expressed in a particular form.  In particular, this program allows you to compute arbitrary hexadecimal digits of pi and arbitrary binary digits of log(2). It is accurate out to the 100 millionth hex digit of pi. It can compute the millionth digit in about 10 seconds, the 10 millionth digit in about 2 minutes and the 100 millionth digit in about 20 minutes (the BBP algorithm is linear in d where d is the digit place). I used the GNU MP Bignum Library to achieve this level of precision.",
+		"images": ["images/pi.jpg"]
 	},
 	{
 		"title": "twisted-life",
 		"dates": "2013",
-		"description": "Video game (written in CoffeeScript) based on J.H. Conway's Game of Life.",
-		"images": ["images/twisted-life.tiff"]
+		"description": "Retro-style video game, written in CoffeeScript, based on J.H. Conway's Game of Life.  I've always liked cellular automata.  Don't let the twisted Life forms get you.  You're gonna die, buddy.",
+		"images": ["images/twisted-life.jpg"]
 	}
 	]
 };
@@ -69,7 +67,16 @@ projects.display = function () {
         $("#projects").append(HTMLprojectStart);
         var formattedTitle = 
             HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-        $("#projects").append(formattedTitle);
+        var formattedDates = 
+            HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        var formattedDescription = 
+            HTMLprojectDates.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedTitle + formattedDates + formattedDescription);
+        for (var image in projects.projects[project].images) {
+            var formattedImage = 
+                HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+            $(".project-entry:last").append(formattedImage);
+        }
    }
 };
 
@@ -88,7 +95,7 @@ var bio = {
 	"skills": [
 		"Programming", "Math", "C", "C++", "Lisp (Common Lisp, Scheme, and Clojure)", "Haskell", "Scala", "Perl", "Java"
 		],
-	"biopic": "images/lambda-small.png"
+	"biopic": "images/lambda.jpg"
 };
 
 var education = {
