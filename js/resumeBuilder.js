@@ -60,17 +60,19 @@ var projects = {
 		"description": "Video game (written in CoffeeScript) based on J.H. Conway's Game of Life.",
 		"images": ["images/twisted-life.tiff"]
 	}
-	],
-
-    "display": function() {
-        for (var project in projects) {
-            $("#projects").append(HTMLprojectStart);
-            var formattedTitle = 
-                HTMLprojectTitle.replace("%data%", projects[project].title);
-            $("#projects").append(formattedTitle);
-       }
-    }
+	]
 };
+
+
+projects.display = function () {
+    for (var project in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
+        var formattedTitle = 
+            HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $("#projects").append(formattedTitle);
+   }
+};
+
 
 var bio = {
 	"name": "Paul Reiners",
