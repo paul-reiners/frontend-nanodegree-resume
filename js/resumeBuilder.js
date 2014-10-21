@@ -10,7 +10,7 @@ var work = {
         {
             "employer": "IBM",
             "title": "Staff Software Engineer",
-            "location": "Rochester, MN and Burlingame, CA",
+            "location": "Burlingame, CA",
             "dates": "2002&mdash;2009",
             "description": "J2EE programmer on WebSphere."
         },
@@ -262,3 +262,5 @@ function inName(theName) {
 
     return firstName + " " + lastName;
 }
+
+$("#mapDiv").append(googleMap);
