@@ -184,7 +184,7 @@ var education = {
                 "Computer Science"
             ],
             "dates": 1996,
-            "url": "http://www.iastate.edu/"
+            "url": "http://www.cs.iastate.edu/"
         },
         {
             "name": "University of Illinois",
@@ -194,7 +194,7 @@ var education = {
                 "Applied Mathematics (Theory of Computation)"
             ],
             "dates": 1991,
-            "url": "http://illinois.edu/"
+            "url": "http://www.math.uiuc.edu/"
         },
         {
             "name": "University of Northern Iowa",
@@ -204,7 +204,7 @@ var education = {
                 "Mathematics"
             ],
             "dates": 1984,
-            "url": "http://www.uni.edu/"
+            "url": "http://www.uni.edu/math/welcome-uni-department-mathematics"
         }
     ],
     "onlineCourses": [
@@ -265,6 +265,8 @@ education.display = function () {
         
         var formattedName = 
             HTMLschoolName.replace("%data%", education.schools[school].name);
+        formattedName = 
+            formattedName.replace("%url%", education.schools[school].url);
         var formattedDegree = 
             HTMLschoolDegree.replace(
                 "%data%", education.schools[school].degree);
