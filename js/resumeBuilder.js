@@ -5,28 +5,32 @@ var work = {
             "title": "Software Developer",
             "location": "Bloomington, Minnesota",
             "dates": "2009&mdash;2014",
-            "description": "Develop new features for and maintain a certification and testing Web application that is used by GMAT and many other testing/certification/licensing organizations."
+            "description": "Develop new features for and maintain a certification and testing Web application that is used by GMAT and many other testing/certification/licensing organizations.",
+            "url": "http://www.pearsonvue.com/"
         },
         {
             "employer": "IBM",
             "title": "Staff Software Engineer",
             "location": "Rochester, Minnesota",
             "dates": "2002&mdash;2009",
-            "description": "J2EE programmer on WebSphere."
+            "description": "J2EE programmer on WebSphere.",
+            "url": "http://www.ibm.com/us/en/"
         },
         {
             "employer": "Siebel Systems",
             "title": "Senior Software Engineer",
             "location": "San Mateo, California",
             "dates": "1996&mdash;2002",
-            "description": "C++ and Java development."
+            "description": "C++ and Java development.",
+            "url": "http://en.wikipedia.org/wiki/Siebel_Systems"
         },
         {
             "employer": "Iowa State University Math Department",
             "title": "Temporary Mathematics Instructor",
             "location": "Ames, Iowa",
             "dates": "1992&mdash;1993",
-            "description": "Taught calculus and trigonometry, four classes per semester."
+            "description": "Taught calculus and trigonometry, four classes per semester.",
+            "url": "http://www.math.iastate.edu/"
         }
     ]
 };
@@ -37,6 +41,8 @@ work.display = function () {
         
         var formattedEmployer = 
             HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        formattedEmployer = 
+            formattedEmployer.replace("%url%", work.jobs[job].url);
         var formattedJobTitle = 
             HTMLworkTitle.replace("%data%", work.jobs[job].title);
         var formattedEmployerJobTitle = 
