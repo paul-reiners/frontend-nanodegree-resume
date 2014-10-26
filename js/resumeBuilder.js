@@ -10,7 +10,7 @@ var work = {
         {
             "employer": "IBM",
             "title": "Staff Software Engineer",
-            "location": "Burlingame, CA",
+            "location": "Rochester, MN",
             "dates": "2002&mdash;2009",
             "description": "J2EE programmer on WebSphere."
         },
@@ -80,11 +80,10 @@ projects.display = function () {
    }
 };
 
-
 var bio = {
 	"name": "Paul Reiners",
 	"role": "Software Developer",
-	"welcomeMessage": "I have many years of software development experience programming in C, C++, Java, Lisp, Python, R, and miscellaneous other languages. I have an M.S. in computer science and an M.S. in math. I am particularly knowledgeable in algorithms, data science, functional programming, and computational math.",
+	"welcomeMessage": "I have many years of software development experience programming in C, C++, Java, Lisp, Python, R, and miscellaneous other languages. I have an M.S. in computer science and an M.S. in math. I am particularly knowledgeable in algorithms, data science, functional programming, and computational math.  I am looking for a job as a data scientist or a data analyst.",
 	"contacts" : {
 		"mobile": "952-846-7749",
 		"email": "paul.reiners@gmail.com",
@@ -95,7 +94,7 @@ var bio = {
 	"skills": [
 		"Programming", "Math", "C", "C++", "Lisp (Common Lisp, Scheme, and Clojure)", "Haskell", "Scala", "Perl", "Java"
 		],
-	"biopic": "images/lambda.jpg"
+	"biopic": "images/binary.png"
 };
 
 var education = {
@@ -183,10 +182,14 @@ var education = {
     ]
 };
 
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(formattedRole);
-
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
+var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+$("#header").prepend(formattedWelcomeMsg);
+$("#header").prepend(formattedbioPic);
+$("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
 if (bio.skills.length > 0) {
@@ -199,24 +202,23 @@ if (bio.skills.length > 0) {
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#topContacts").append(formattedMobile);
+$("#footerContacts").append(formattedMobile);
 
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 $("#topContacts").append(formattedEmail);
+$("#footerContacts").append(formattedEmail);
 
 var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
 $("#topContacts").append(formattedGitHub);
+$("#footerContacts").append(formattedGitHub);
 
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 $("#topContacts").append(formattedTwitter);
+$("#footerContacts").append(formattedTwitter);
 
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
-
-var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
-$("#topContacts").append(formattedbioPic);
-
-var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#topContacts").append(formattedWelcomeMsg);
+$("#footerContacts").append(formattedLocation);
 
 function displayWork() {
     for (var job in work.jobs) {
