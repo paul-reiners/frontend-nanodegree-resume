@@ -129,7 +129,7 @@ var bio = {
 		"location": "Chaska, Minnesota"
 	},
 	"skills": [
-		"Programming", "Math", "C", "C++", "Lisp (Common Lisp, Scheme, and Clojure)", "Haskell", "Scala", "Perl", "Java"
+		"Algorithms", "Math", "Haskell", "Lisp (Common Lisp, Scheme, and Clojure)", "Scala", "Python", "C", "R"
 		],
 	"biopic": "images/binary.png"
 };
