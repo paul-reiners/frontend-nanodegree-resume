@@ -299,16 +299,4 @@ $(document).click(function(loc) {
     logClicks(x, y);
 });
 
-function inName(theName) {
-    var parts = theName.split(" ");
-    var firstName = parts[0];
-    var lastName = parts[1];
-
-    firstName = 
-        firstName.slice(0, 1).toUpperCase() + firstName.slice(1).toLowerCase();
-    lastName = lastName.toUpperCase();
-
-    return firstName + " " + lastName;
-}
-
 $("#mapDiv").append(googleMap);
