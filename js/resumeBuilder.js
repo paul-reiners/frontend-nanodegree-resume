@@ -90,7 +90,7 @@ var projects = {
 	{
 		"title": "twisted-life",
 		"dates": "2013",
-		"description": "Retro-style video game, written in CoffeeScript, based on J.H. Conway's Game of Life.  I've always liked cellular automata.  Don't let the twisted Life forms get you.  You're gonna die, buddy.",
+		"description": "Retro-style video game, written in CoffeeScript, based on J.H. Conway's Game of Life.  I've always liked cellular automata.  Don't let the twisted Life forms get you.",
 		"images": ["images/twisted-life.jpg"],
         "url": "https://github.com/paul-reiners/twisted-life"
 	}
