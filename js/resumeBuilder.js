@@ -183,7 +183,7 @@ var education = {
             'majors': [
                 'Computer Science'
             ],
-            'dates': 1996,
+            'dates': '1996',
             'url': 'http://www.cs.iastate.edu/'
         },
         {
@@ -193,7 +193,7 @@ var education = {
             'majors': [
                 'Applied Mathematics (Theory of Computation)'
             ],
-            'dates': 1991,
+            'dates': '1991',
             'url': 'http://www.math.uiuc.edu/'
         },
         {
@@ -203,7 +203,7 @@ var education = {
             'majors': [
                 'Mathematics'
             ],
-            'dates': 1984,
+            'dates': '1984',
             'url': 'http://www.uni.edu/math/welcome-uni-department-mathematics'
         }
     ],
@@ -211,49 +211,49 @@ var education = {
         {
             'title': '15.071x: The Analytics Edge',
             'school': 'edX: MITx',
-            'dates': 2014,
+            'dates': '2014',
             'url': 'https://verify.edx.org/cert/60fb6ce3477a4778bdb6a80e6fa2e078'
         },
         {
             'title': 'The Data Scientist’s Toolbox',
             'school': 'Coursera: Johns Hopkins University',
-            'dates': 2014,
+            'dates': '2014',
             'url': 'https://www.coursera.org/records/J9hC6nbrfNaEa3cD'
         },
         {
             'title': 'R Programming',
             'school': 'Coursera: Johns Hopkins University',
-            'dates': 2014,
+            'dates': '2014',
             'url': 'https://www.coursera.org/records/QjTuqpB3vZageEsy'
         },
         {
             'title': 'Getting and Cleaning Data',
             'school': 'Coursera: Johns Hopkins University',
-            'dates': 2014,
+            'dates': '2014',
             'url': 'https://www.coursera.org/records/pFPtcyH5BSQ5p2Kp'
         },
         {
             'title': 'Exploratory Data Analysis',
             'school': 'Coursera: Johns Hopkins University',
-            'dates': 2014,
+            'dates': '2014',
             'url': 'https://www.coursera.org/records/w4Jg4GFkguBVQd5Q'
         },
         {
             'title': 'Reproducible Research',
             'school': 'Coursera: Johns Hopkins University',
-            'dates': 2014,
+            'dates': '2014',
             'url': 'https://www.coursera.org/records/hEmyst95cKdWbHY6'
         },
         {
             'title': 'SABR101x: Sabermetrics 101: Introduction to Baseball Analytics',
             'school': 'edX BUx',
-            'dates': 2014,
+            'dates': '2014',
             'url': 'https://verify.edx.org/cert/183eb375232e4149bbc1ecb225bc7bee'
         },
         {
             'title': 'Intro to Hadoop and MapReduce',
             'school': 'Udacity',
-            'dates': 2014,
+            'dates': '2014',
             'url': 'https://www.udacity.com/verified-certificate/ud617'
         }
     ]
