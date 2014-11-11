@@ -150,7 +150,7 @@ bio.display = function () {
         for (skill in bio.skills) {
             var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
             $("#skills").append(formattedSkill);
-        };
+        }
     }
 
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -172,7 +172,7 @@ bio.display = function () {
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").append(formattedLocation);
     $("#footerContacts").append(formattedLocation);
-}
+};
 
 var education = {
     "schools": [
